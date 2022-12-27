@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.stefandicode</groupId>
 	<artifactId>discovery-server</artifactId>
-	<version>0.1.0-SNAPSHOT</version>
+	<version>0.1.0</version>
 	<name>discovery-server</name>
 	<description>A discovery server for the application</description>
 	<properties>

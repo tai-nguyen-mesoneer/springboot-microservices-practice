@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.stefandicode</groupId>
 	<artifactId>movie-ratings-service</artifactId>
-	<version>0.1.0-SNAPSHOT</version>
+	<version>0.1.0</version>
 	<name>movie-ratings-service</name>
 	<description>Movie ratings service</description>
 	<properties>

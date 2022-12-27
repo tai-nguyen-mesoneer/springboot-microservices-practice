@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.stefandicode</groupId>
 	<artifactId>movie-catalog-service</artifactId>
-	<version>0.1.0-SNAPSHOT</version>
+	<version>0.1.0</version>
 	<name>movie-catalog-service</name>
 	<description>Movie catalog service</description>
 	<properties>
