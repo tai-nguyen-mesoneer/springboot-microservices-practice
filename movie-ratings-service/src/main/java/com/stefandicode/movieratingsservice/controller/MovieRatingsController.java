@@ -26,8 +26,8 @@ public class MovieRatingsController {
             .userId(userId)
             .movieRatingList(
                 Arrays.asList(
-                    MovieRating.builder().movieId(1).ratings(8.7).build(),
-                    MovieRating.builder().movieId(2).ratings(5.5).build()))
+                    MovieRating.builder().movieId(550).ratings(8.7).build(),
+                    MovieRating.builder().movieId(690).ratings(5.5).build()))
             .build());
   }
 }
