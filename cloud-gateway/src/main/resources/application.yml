@@ -1,0 +1,23 @@
+server:
+  port: 9191
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: movie-catalog-service
+          uri: lb://movie-catalog-service
+          predicates:
+            - Path=/catalogs/**
+        - id: movie-ratings-service
+          uri: lb://movie-ratings-service
+          predicates:
+            - Path=/ratings/**
+        - id: movie-info-service
+          uri: lb://movie-info-service
+          predicates:
+            - Path=/movies/**
+
+
