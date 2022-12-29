@@ -1,0 +1,39 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: movie-catalog-service
+
+resilience4j:
+  circuitbreaker:
+    configs:
+      default:
+        failure-rate-threshold: 60
+        sliding-window-size: 100
+        wait-duration-in-open-state: 10000
+        event-consumer-buffer-size: 10
+        register-health-indicator: true
+        permitted-number-of-calls-in-half-open-state: 10
+      someShared:
+        sliding-window-size: 50
+        permitted-number-of-calls-in-half-open-state: 10
+    instances:
+      getUserRatingsCB:
+        base-config: default
+        wait-duration-in-open-state: 5000
+      getMovieCB:
+        base-config: someShared
+  thread-pool-bulkhead:
+    configs:
+      default:
+        max-thread-pool-size: 20
+        core-thread-pool-size: 10
+    instances:
+      getUserRatingsBH:
+        base-config: default
+      getMovieBH:
+        base-config: default
+
+
+
+
